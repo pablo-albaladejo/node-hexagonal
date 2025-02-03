@@ -2,7 +2,7 @@ import { Server } from '@/adapters/in/express/server';
 import { PinoLogger } from '@/adapters/out/pino/pinoClient';
 import { Configuration } from '@/config';
 
-import { createApiRouter } from './apiRouter';
+import { createApiRouter } from './api.router';
 import { createRouter } from './router';
 
 export const createServer = (config: Configuration, logger: PinoLogger): Server => {
