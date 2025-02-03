@@ -1,7 +1,7 @@
-import { AppError, ValidationError } from '@application/errors';
 import { ErrorRequestHandler, RequestHandler } from 'express';
 
 import { Logger } from '@/application/ports/logger';
+import { AppError, ValidationError } from '@/shared/errors';
 
 export const createErrorMiddleware = (logger: Logger) => ({
     routeNotFoundHandler: handleRouteNotFound,
