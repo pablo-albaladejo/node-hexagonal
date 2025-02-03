@@ -5,7 +5,7 @@ import helmet from 'helmet';
 
 import { createErrorMiddleware } from '@/adapters/in/express/middlewares/errorMiddleware';
 import { createApiRouter } from '@/adapters/in/express/routers/api.router';
-import { type Logger } from '@/application/ports/logger';
+import { type Logger } from '@/application/ports/out/logger';
 
 export const createRouter = (logger: Logger): Router => {
     const router = Router();

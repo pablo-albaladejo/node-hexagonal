@@ -1,6 +1,6 @@
 import pino, { HttpLogger } from 'pino-http';
 
-import { Logger } from '@/application/ports/logger';
+import { Logger } from '@/application/ports/out/logger';
 import { ClientConfiguration } from '@/infrastructure/config';
 
 export class PinoLogger implements Logger {

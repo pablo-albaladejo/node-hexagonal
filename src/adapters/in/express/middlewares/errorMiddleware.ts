@@ -1,6 +1,6 @@
 import { ErrorRequestHandler, RequestHandler } from 'express';
 
-import { Logger } from '@/application/ports/logger';
+import { Logger } from '@/application/ports/out/logger';
 import { AppError, ValidationError } from '@/shared/errors';
 
 export const createErrorMiddleware = (logger: Logger) => ({

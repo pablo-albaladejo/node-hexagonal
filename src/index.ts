@@ -2,9 +2,9 @@
 
 import { createServer } from '@adapters/in/express';
 
-import { Server } from '@/adapters/in/express/server';
 import { logger } from '@/adapters/out/pino';
 import { config } from '@/infrastructure/config';
+import { Server } from '@/infrastructure/server';
 
 const server: Server = createServer(config, logger);
 
