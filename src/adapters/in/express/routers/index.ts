@@ -3,13 +3,14 @@ import cors from 'cors';
 import express, { Router } from 'express';
 import helmet from 'helmet';
 
+import { createErrorMiddleware } from '@/adapters/in/express/middlewares/errorMiddleware';
+import { createApiRouter } from '@/adapters/in/express/routers/api.router';
 import { type Logger } from '@/application/ports/logger';
 
-import { createErrorMiddleware } from './middlewares/errorMiddleware';
-
-export const createRouter = (apiRouter: Router, logger: Logger): Router => {
+export const createRouter = (logger: Logger): Router => {
     const router = Router();
     const errorMiddleware = createErrorMiddleware(logger);
+    const apiRouter = createApiRouter();
 
     router
         .use(helmet())
