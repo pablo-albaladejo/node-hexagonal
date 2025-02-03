@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
-import { createApiRouter } from '@adapters/express/apiRouter';
-import { createRouter } from '@adapters/express/router';
-import { Server } from '@adapters/express/server';
+import { createServer } from '@adapters/in/express';
 
+import { Server } from '@/adapters/in/express/server';
 import { logger } from '@/adapters/out/pino';
 import { config } from '@/config';
 
-const apiRouter = createRouter(createApiRouter(), logger);
-const server = new Server(apiRouter, logger, config.server);
+const server: Server = createServer(config, logger);
 
 const startServer = async (): Promise<void> => {
     await server.start();
