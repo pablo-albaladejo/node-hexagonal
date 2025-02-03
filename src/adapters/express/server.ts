@@ -1,8 +1,8 @@
-import { type PinoLogger } from '@adapters/pino/pinoClient';
 import express from 'express';
 import * as http from 'http';
 import { type AddressInfo } from 'net';
 
+import { type PinoLogger } from '@/adapters/out/pino/pinoClient';
 import { type ClientConfiguration } from '@/config';
 
 export class Server {

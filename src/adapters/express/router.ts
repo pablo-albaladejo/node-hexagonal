@@ -1,8 +1,9 @@
-import { type Logger } from '@application/services/logger';
 import compression from 'compression';
 import cors from 'cors';
 import express, { Router } from 'express';
 import helmet from 'helmet';
+
+import { type Logger } from '@/application/ports/logger';
 
 import { createErrorMiddleware } from './middlewares/errorMiddleware';
 

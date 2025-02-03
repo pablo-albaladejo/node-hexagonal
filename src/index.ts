@@ -3,8 +3,8 @@
 import { createApiRouter } from '@adapters/express/apiRouter';
 import { createRouter } from '@adapters/express/router';
 import { Server } from '@adapters/express/server';
-import { logger } from '@adapters/pino';
 
+import { logger } from '@/adapters/out/pino';
 import { config } from '@/config';
 
 const apiRouter = createRouter(createApiRouter(), logger);
