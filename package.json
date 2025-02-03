@@ -1,0 +1,64 @@
+{
+    "name": "express-starter",
+    "version": "1.0.0",
+    "description": "Express starter project",
+    "author": {
+        "name": "Gonzalo Plaza",
+        "email": "gonzaloplazac@gmail.com"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "build": "rimraf ./dist && tsc -p . && tsc-alias",
+        "dev": "nodemon",
+        "lint": "eslint --cache --fix '**/*.ts'",
+        "format": "prettier --config .prettierrc.json './src/**/*.{js,json,ts,md}' --write --log-level error",
+        "prepare": "husky",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "setup": "husky"
+    },
+    "keywords": [],
+    "dependencies": {
+        "compression": "^1.7.5",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^5.0.1",
+        "helmet": "^8.0.0",
+        "pino-http": "^10.4.0",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.2.0",
+        "@eslint/js": "^9.19.0",
+        "@swc/core": "^1.10.9",
+        "@swc/helpers": "^0.5.15",
+        "@tsconfig/node22": "^22.0.0",
+        "@types/compression": "^1.7.5",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.10.10",
+        "@typescript-eslint/eslint-plugin": "^8.21.0",
+        "@typescript-eslint/parser": "^8.21.0",
+        "eslint": "^9.19.0",
+        "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-perfectionist": "^4.7.0",
+        "eslint-plugin-prettier": "^5.2.3",
+        "eslint-plugin-promise": "^7.2.1",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^15.14.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.2",
+        "nodemon": "^3.1.9",
+        "prettier": "^3.4.2",
+        "rimraf": "^6.0.1",
+        "ts-node": "^10.9.2",
+        "tsc-alias": "^1.8.10",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.7.3"
+    }
+}
