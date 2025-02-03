@@ -1,7 +1,7 @@
 import pino, { HttpLogger } from 'pino-http';
 
 import { Logger } from '@/application/ports/logger';
-import { ClientConfiguration } from '@/config';
+import { ClientConfiguration } from '@/infrastructure/config';
 
 export class PinoLogger implements Logger {
     private readonly client;

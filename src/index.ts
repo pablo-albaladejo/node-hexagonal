@@ -4,7 +4,7 @@ import { createServer } from '@adapters/in/express';
 
 import { Server } from '@/adapters/in/express/server';
 import { logger } from '@/adapters/out/pino';
-import { config } from '@/config';
+import { config } from '@/infrastructure/config';
 
 const server: Server = createServer(config, logger);
 

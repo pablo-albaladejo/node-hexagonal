@@ -2,8 +2,8 @@ import express from 'express';
 import * as http from 'http';
 import { type AddressInfo } from 'net';
 
-import { PinoLogger } from '@/adapters/out/pino/pinoClient';
-import { type ClientConfiguration } from '@/config';
+import { ClientConfiguration } from '@/infrastructure/config';
+import { PinoLogger } from '@/infrastructure/pino-client';
 
 export class Server {
     private readonly express: express.Application;
